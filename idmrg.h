@@ -124,6 +124,7 @@ idmrg(MPS & psi,
 
     if(psi(0))
         {
+        psi.ref(1) *= psi(0);
         lastV = dag(psi(0));
         lastV /= norm(lastV);
         lastV.apply(detail::PseudoInvert(0));
